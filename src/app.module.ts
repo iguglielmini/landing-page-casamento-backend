@@ -5,6 +5,8 @@ import { typeOrmConfig } from './config/ormconfig';
 import { GuestModule } from './guest/guest.module';
 import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
+import { WeddingExpenseModule } from './wedding-expense/wedding-expense.module';
+import { ExpenseTypeModule } from './expense-type/expense-type.module';
 
 @Module({
   imports: [
@@ -17,6 +19,8 @@ import { UsersModule } from './users/users.module';
     GuestModule,
     UsersModule,
     AuthModule,
+    WeddingExpenseModule,
+    ExpenseTypeModule,
   ],
 })
 export class AppModule {}
