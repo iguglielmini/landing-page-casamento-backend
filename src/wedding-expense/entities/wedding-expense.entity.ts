@@ -4,8 +4,10 @@ import {
   Column,
   CreateDateColumn,
   ManyToOne,
+  OneToMany,
 } from 'typeorm';
 import { ExpenseType } from '../../expense-type/entities/expense-type.entity';
+import { WeddingPayment } from '../../wedding-payment/entities/wedding-payment.entity';
 
 @Entity()
 export class WeddingExpense {
@@ -29,4 +31,7 @@ export class WeddingExpense {
 
   @CreateDateColumn()
   createdAt: Date;
+
+  @OneToMany(() => WeddingPayment, (payment) => payment.expense)
+  payments: WeddingPayment[];
 }

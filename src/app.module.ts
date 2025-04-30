@@ -7,6 +7,7 @@ import { AuthModule } from './auth/auth.module';
 import { UsersModule } from './users/users.module';
 import { WeddingExpenseModule } from './wedding-expense/wedding-expense.module';
 import { ExpenseTypeModule } from './expense-type/expense-type.module';
+import { WeddingPaymentModule } from './wedding-payment/wedding-payment.module';
 
 @Module({
   imports: [
@@ -21,6 +22,7 @@ import { ExpenseTypeModule } from './expense-type/expense-type.module';
     AuthModule,
     WeddingExpenseModule,
     ExpenseTypeModule,
+    WeddingPaymentModule,
   ],
 })
 export class AppModule {}
